@@ -30,6 +30,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: npm audit (high and critical)
+        run: npm audit --audit-level=high
+
+      - name: Secret pattern scan
+        run: bash scripts/check-secrets.sh
+
       - name: Build static site
         run: npm run build
 

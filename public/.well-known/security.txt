@@ -1,0 +1,4 @@
+Contact: mailto:synaplift@outlook.com
+Preferred-Languages: en
+Canonical: https://bootsurf.com/.well-known/security.txt
+Policy: https://bootsurf.com/privacy
