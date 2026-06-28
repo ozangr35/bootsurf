@@ -53,9 +53,10 @@ jobs:
 
       - name: Block committed env files
         run: |
-          if git ls-files '.env' '.env.*' '*.pem' '*.key' '*.p12' | grep -q .; then
+          tracked="$(git ls-files '.env' '.env.local' '.env.*.local' '*.pem' '*.key' '*.p12' || true)"
+          if [ -n "$tracked" ]; then
             echo "Sensitive files must not be committed."
-            git ls-files '.env' '.env.*' '*.pem' '*.key' '*.p12'
+            echo "$tracked"
             exit 1
           fi
 
