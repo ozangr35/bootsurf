@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Bootsurf">
+  <defs>
+    <linearGradient id="bs-border" x1="40" y1="64" x2="472" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="bs-wave-main" x1="64" y1="150" x2="448" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF"/>
+      <stop offset="0.35" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="bs-wave-foam" x1="48" y1="310" x2="464" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="32" y="56" width="448" height="400" rx="80" fill="#0B1F3A"/>
+  <rect x="32" y="56" width="448" height="400" rx="80" stroke="url(#bs-border)" stroke-width="9"/>
+
+  <path
+    d="M148 112 L148 388"
+    stroke="#2DD4BF"
+    stroke-width="22"
+    stroke-linecap="round"
+    opacity="0.35"
+  />
+
+  <path
+    d="M148 112 C292 112 356 152 356 212 C356 258 324 286 278 294 C332 304 372 336 372 382 C372 424 318 452 232 452 C188 452 158 436 138 408"
+    stroke="url(#bs-wave-main)"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <path
+    d="M148 248 C278 248 332 286 332 336 C332 378 286 408 218 408"
+    stroke="url(#bs-wave-main)"
+    stroke-width="28"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    opacity="0.92"
+  />
+
+  <path
+    d="M48 348 C176 296 336 296 464 338"
+    stroke="url(#bs-wave-foam)"
+    stroke-width="30"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <path
+    d="M64 378 C188 338 324 338 448 368"
+    stroke="#2DD4BF"
+    stroke-width="15"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.45"
+  />
+  <path
+    d="M80 404 C200 374 312 374 432 392"
+    stroke="#22D3EE"
+    stroke-width="9"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.35"
+  />
+</svg>
