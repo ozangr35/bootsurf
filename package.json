@@ -9,8 +9,7 @@
     "start": "next start -p 3001",
     "lint": "next lint",
     "clean": "rm -rf .next",
-    "preview": "npx --yes serve out -p 3002",
-    "security:check": "bash scripts/check-secrets.sh && npm audit --audit-level=high"
+    "preview": "npx --yes serve out -p 3002"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",

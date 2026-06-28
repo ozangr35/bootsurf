@@ -12,7 +12,6 @@ EXCLUDES=(
   --glob '!out/**'
   --glob '!package-lock.json'
   --glob '!scripts/check-secrets.sh'
-  --glob '!SECURITY.md'
 )
 
 if rg -n "$PATTERN" "${EXCLUDES[@]}" .; then
