@@ -17,17 +17,11 @@ export default function CTASection() {
             maximum engineering impact.
           </p>
           <div className="hero-actions">
-            <a
-              href={`mailto:${contactEmail}`}
-              className="inline-flex items-center gap-2 rounded-xl bg-surf-teal px-8 py-4 text-sm font-bold text-navy transition hover:bg-surf-teal/90 sm:text-base"
-            >
+            <a href={`mailto:${contactEmail}`} className="btn-primary">
               <Mail className="h-4 w-4" />
               Email {contactEmail}
             </a>
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition hover:border-surf-teal/40 sm:text-base"
-            >
+            <Link href="/projects" className="btn-secondary">
               View our portfolio
               <ArrowRight className="h-4 w-4" />
             </Link>

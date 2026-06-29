@@ -1,35 +1,31 @@
 import Footer from "@/components/Footer";
+import GateXCta from "@/components/GateXCta";
 import Navbar from "@/components/Navbar";
-import Link from "next/link";
+import PageHero from "@/components/PageHero";
 import { Mail, MapPin } from "lucide-react";
 import { company, contactEmail, synapliftUrl } from "@/lib/site";
 
 export const metadata = {
-  title: "Contact — Bootsurf",
-  description: "Contact Bootsurf — partnerships, press, and support.",
+  title: "Contact — BootSurf",
+  description: "Contact BootSurf — partnerships, press, and project inquiries.",
 };
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-navy">
+    <main className="min-h-screen overflow-x-hidden bg-navy">
       <Navbar />
-      <article className="mx-auto max-w-3xl px-4 pb-20 pt-28 sm:px-6 sm:pt-32">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-surf-teal">
-          Contact
-        </p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Let&apos;s build something together
-        </h1>
-        <p className="mt-6 text-sm leading-relaxed text-surf-mist sm:text-base">
-          Custom software, mobile app design, or App Store launch support —
-          email us to discuss your project. We typically respond within a few
-          business days.
-        </p>
+      <PageHero
+        kicker="Contact"
+        title="Let's build"
+        titleAccent="something together"
+        description="Custom software, mobile app design, or App Store launch support — email us to discuss your project."
+      />
 
-        <div className="mt-10 space-y-4">
+      <section className="pb-20">
+        <div className="mx-auto max-w-3xl space-y-4 px-4 sm:px-6">
           <a
             href={`mailto:${contactEmail}`}
-            className="flex items-start gap-4 rounded-2xl border border-white/8 bg-navy-50 p-6 transition hover:border-surf-teal/30"
+            className="feature-card glass-panel flex flex-row items-start gap-4 !border-t-0"
           >
             <Mail className="mt-0.5 h-5 w-5 shrink-0 text-surf-teal" />
             <div>
@@ -41,34 +37,35 @@ export default function ContactPage() {
             </div>
           </a>
 
-          <div className="flex items-start gap-4 rounded-2xl border border-white/8 bg-navy-50 p-6">
+          <div className="feature-card glass-panel flex flex-row items-start gap-4 !border-t-0">
             <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-surf-teal" />
             <div>
               <p className="font-semibold text-white">Location</p>
               <p className="mt-1 text-sm text-surf-mist">{company.country}</p>
             </div>
           </div>
+
+          <p className="pt-4 text-sm text-surf-mist">
+            Product website:{" "}
+            <a
+              href={synapliftUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-surf-teal hover:underline"
+            >
+              synaplift.com
+            </a>
+          </p>
         </div>
+      </section>
 
-        <p className="mt-10 text-sm text-surf-mist">
-          Product website:{" "}
-          <a
-            href={synapliftUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-surf-teal hover:underline"
-          >
-            synaplift.com
-          </a>
-        </p>
+      <GateXCta
+        title="Ready to start?"
+        description="Tell us about your product — we'll respond within a few business days."
+        buttonLabel={`Email ${contactEmail}`}
+        buttonHref={`mailto:${contactEmail}`}
+      />
 
-        <Link
-          href="/"
-          className="mt-8 inline-block text-sm font-semibold text-surf-cyan hover:underline"
-        >
-          ← Back to home
-        </Link>
-      </article>
       <Footer />
     </main>
   );

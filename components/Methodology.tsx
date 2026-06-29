@@ -7,7 +7,8 @@ export default function Methodology() {
     <section id="process" className="process-band">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="section-heading">
-          <h2>Flawless Execution Methodology</h2>
+          <p className="section-eyebrow">How we work</p>
+          <h2>Flawless execution methodology</h2>
           <p className="lead text-sm sm:text-base">
             Transparency, precision, and agile delivery form the core of our
             operations.

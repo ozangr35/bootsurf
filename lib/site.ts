@@ -16,5 +16,25 @@ export const company = {
     "We leverage cutting-edge technology to deliver premium custom software, bespoke mobile design, privacy-first AI, and production-grade App Store engineering. Your vision, shipped flawlessly.",
   missionHeadline: "Engineering trust, delivering value.",
   missionIntro:
-    "At Bootsurf, software is not just an output — it is an enabler of product velocity, privacy, and human progress. We build AI-native mobile products that ship.",
+    "At BootSurf, software is not just an output — it is an enabler of product velocity, privacy, and human progress. We build AI-native mobile products that ship.",
 };
+
+export const techStrip = [
+  "SwiftUI",
+  "Flutter",
+  "Next.js",
+  "TypeScript",
+  "OpenAI",
+  "RevenueCat",
+  "asc CLI",
+  "TestFlight",
+  "HealthKit",
+  "PostgreSQL",
+] as const;
+
+export const studioStats = [
+  { value: "AI-native", label: "Mobile products" },
+  { value: "App Store", label: "Release discipline" },
+  { value: "Privacy-first", label: "By design" },
+  { value: "Netherlands", label: "EU studio" },
+] as const;
