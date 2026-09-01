@@ -57,8 +57,6 @@ export default function ContactPage() {
             >
               SynapLift
             </a>
-            {" · "}
-            Euno (site launching)
           </p>
         </div>
       </section>
