@@ -1,6 +1,6 @@
 import BrandLogo from "@/components/BrandLogo";
 import Link from "next/link";
-import { company, contactEmail, eunoUrl, siteUrl, synapliftUrl } from "@/lib/site";
+import { company, contactEmail, siteUrl, synapliftUrl } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -107,16 +107,6 @@ export default function Footer() {
                   className="transition hover:text-surf-teal"
                 >
                   SynapLift
-                </a>
-              </li>
-              <li>
-                <a
-                  href={eunoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition hover:text-surf-teal"
-                >
-                  Euno
                 </a>
               </li>
             </ul>

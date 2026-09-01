@@ -3,7 +3,7 @@ import GateXCta from "@/components/GateXCta";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import { Mail, MapPin } from "lucide-react";
-import { company, contactEmail, eunoUrl, synapliftUrl } from "@/lib/site";
+import { company, contactEmail, synapliftUrl } from "@/lib/site";
 
 export const metadata = {
   title: "Contact — BootSurf",
@@ -48,26 +48,15 @@ export default function ContactPage() {
           </div>
 
           <p className="pt-4 text-sm text-surf-mist">
-            Products:{" "}
+            Product website:{" "}
             <a
               href={synapliftUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-surf-teal hover:underline"
             >
-              SynapLift
+              synaplift.com
             </a>
-            {" · "}
-            <a
-              href={eunoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-surf-teal hover:underline"
-            >
-              Euno
-            </a>
-            {" "}
-            (site launching)
           </p>
         </div>
       </section>
