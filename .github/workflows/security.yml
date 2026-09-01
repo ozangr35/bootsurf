@@ -62,3 +62,6 @@ jobs:
 
       - name: Scan source for common secret patterns
         run: bash scripts/check-secrets.sh
+
+      - name: Check CSP/XFO/referrer, mailto contact, HTTPS URLs
+        run: bash scripts/check-site-security.sh
