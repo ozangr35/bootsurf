@@ -1,6 +1,6 @@
 import BrandLogo from "@/components/BrandLogo";
 import Link from "next/link";
-import { company, contactEmail, siteUrl, synapliftUrl } from "@/lib/site";
+import { company, contactEmail, eunoUrl, siteUrl, synapliftUrl } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -98,6 +98,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>{company.country}</li>
+              <li>KVK {company.kvk}</li>
               <li>
                 <a
                   href={synapliftUrl}
@@ -108,13 +109,24 @@ export default function Footer() {
                   SynapLift
                 </a>
               </li>
+              <li>
+                <a
+                  href={eunoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-surf-teal"
+                >
+                  Euno
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-white/8 pt-8 text-xs text-surf-mist sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {company.legalName}. All rights reserved.
+            © {year} {company.legalName}. All rights reserved. · KVK{" "}
+            {company.kvk} · {company.country}
           </p>
           <p className="text-surf-mist/80">
             <a href={siteUrl} className="hover:text-surf-teal">

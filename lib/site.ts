@@ -6,10 +6,14 @@ export const contactEmail = "synaplift@outlook.com";
 /** Featured launch — product marketing lives on its own domain. */
 export const synapliftUrl = "https://synaplift.com";
 
+/** Product site — launching; not a store listing. */
+export const eunoUrl = "https://euno.app";
+
 export const company = {
   name: "BootSurf",
   legalName: "BootSurf",
   country: "Netherlands",
+  kvk: "42091471",
   tagline:
     "AI-native software engineering and mobile UX — privacy-first, built App Store ready.",
   heroSubline:

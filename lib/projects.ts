@@ -6,7 +6,8 @@ export type ProjectLink = {
 
 export type Project = {
   name: string;
-  icon: string;
+  /** Omit when no product icon exists — do not invent logos. */
+  icon?: string;
   /** App icons are square; brand logos keep aspect ratio. */
   iconStyle?: "app" | "brand";
   description: string;
@@ -42,10 +43,19 @@ export const projects: Project[] = [
     name: "SynapLift",
     icon: "/branding/synaplift-app-icon.png",
     description:
-      "AI strength training app for serious lifters. Workout logging, PR analytics, and an AI Coach grounded in real training history. Built App Store ready with subscriptions, Sign in with Apple, and privacy-first AI consent flows.",
-    tags: ["Mobile", "iOS", "AI", "SwiftUI"],
+      "AI strength training app for serious lifters. Workout logging, PR analytics, and an AI Coach grounded in real training history. Built with Flutter for iOS and Android — subscriptions, Sign in with Apple, and privacy-first AI consent flows.",
+    tags: ["Mobile", "Flutter", "iOS", "Android", "AI"],
     links: [
       { label: "Website", href: "https://synaplift.com", type: "web" },
+    ],
+  },
+  {
+    name: "Euno",
+    description:
+      "Privacy-first wellness journal and gentle AI coach. Native iOS, built with SwiftUI. Site launching at euno.app.",
+    tags: ["iOS", "SwiftUI", "AI"],
+    links: [
+      { label: "Website", href: "https://euno.app", type: "web" },
     ],
   },
   {

@@ -18,9 +18,10 @@ export default function PrivacyPage() {
 
         <h2>Who we are</h2>
         <p>
-          {company.legalName} ({company.country}) operates this studio website
-          at bootsurf.com. Product-specific privacy policies for our apps are
-          published on their respective product sites.
+          {company.legalName} ({company.country}, KVK {company.kvk}) operates
+          this studio website at bootsurf.com. Product-specific privacy
+          policies for our apps are published on their respective product
+          sites.
         </p>
 
         <h2>What this site collects</h2>

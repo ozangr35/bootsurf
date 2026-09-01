@@ -61,17 +61,19 @@ export default function ProjectsGrid({
             style={{ transitionDelay: `${i * 100}ms` }}
           >
             <div className="project-header">
-              <Image
-                src={project.icon}
-                alt={project.name}
-                width={project.iconStyle === "brand" ? 203 : 72}
-                height={project.iconStyle === "brand" ? 253 : 72}
-                className={
-                  project.iconStyle === "brand"
-                    ? "project-icon project-icon--brand"
-                    : "project-icon"
-                }
-              />
+              {project.icon ? (
+                <Image
+                  src={project.icon}
+                  alt={project.name}
+                  width={project.iconStyle === "brand" ? 203 : 72}
+                  height={project.iconStyle === "brand" ? 253 : 72}
+                  className={
+                    project.iconStyle === "brand"
+                      ? "project-icon project-icon--brand"
+                      : "project-icon"
+                  }
+                />
+              ) : null}
               <div className="project-title-group">
                 <h3>{project.name}</h3>
                 <div className="project-links">

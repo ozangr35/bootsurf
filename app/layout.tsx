@@ -61,6 +61,11 @@ const organizationJsonLd = {
   logo: `${siteUrl}/branding/logo-transparent.png`,
   description: company.tagline,
   email: contactEmail,
+  identifier: {
+    "@type": "PropertyValue",
+    name: "KVK",
+    value: company.kvk,
+  },
   address: {
     "@type": "PostalAddress",
     addressCountry: "NL",
