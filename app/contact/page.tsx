@@ -48,15 +48,17 @@ export default function ContactPage() {
           </div>
 
           <p className="pt-4 text-sm text-surf-mist">
-            Product website:{" "}
+            Products:{" "}
             <a
               href={synapliftUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-surf-teal hover:underline"
             >
-              synaplift.com
+              SynapLift
             </a>
+            {" · "}
+            Euno (site launching)
           </p>
         </div>
       </section>
