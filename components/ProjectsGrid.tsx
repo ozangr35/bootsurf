@@ -61,32 +61,52 @@ export default function ProjectsGrid({
             style={{ transitionDelay: `${i * 100}ms` }}
           >
             <div className="project-header">
-              <Image
-                src={project.icon}
-                alt={project.name}
-                width={project.iconStyle === "brand" ? 203 : 72}
-                height={project.iconStyle === "brand" ? 253 : 72}
-                className={
-                  project.iconStyle === "brand"
-                    ? "project-icon project-icon--brand"
-                    : "project-icon"
-                }
-              />
+              {project.icon ? (
+                <Image
+                  src={project.icon}
+                  alt={project.name}
+                  width={project.iconStyle === "brand" ? 203 : 72}
+                  height={project.iconStyle === "brand" ? 253 : 72}
+                  className={
+                    project.iconStyle === "brand"
+                      ? "project-icon project-icon--brand"
+                      : "project-icon"
+                  }
+                />
+              ) : null}
               <div className="project-title-group">
-                <h3>{project.name}</h3>
+                <div className="project-title-row">
+                  <h3>{project.name}</h3>
+                  {project.launching ? (
+                    <span className="tag">Launching</span>
+                  ) : null}
+                </div>
                 <div className="project-links">
-                  {project.links.map((link) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`project-link ${link.type}`}
-                    >
-                      {link.type === "store" ? <AppStoreIcon /> : <GlobeIcon />}
-                      {link.label}
-                    </a>
-                  ))}
+                  {project.links.map((link) =>
+                    link.href ? (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`project-link ${link.type}`}
+                      >
+                        {link.type === "store" ? (
+                          <AppStoreIcon />
+                        ) : (
+                          <GlobeIcon />
+                        )}
+                        {link.label}
+                      </a>
+                    ) : (
+                      <span
+                        key={link.label}
+                        className={`project-link ${link.type} muted`}
+                      >
+                        {link.label}
+                      </span>
+                    ),
+                  )}
                 </div>
               </div>
             </div>

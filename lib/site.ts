@@ -10,6 +10,7 @@ export const company = {
   name: "BootSurf",
   legalName: "BootSurf",
   country: "Netherlands",
+  kvk: "42091471",
   tagline:
     "AI-native software engineering and mobile UX — privacy-first, built App Store ready.",
   heroSubline:

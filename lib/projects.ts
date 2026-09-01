@@ -1,14 +1,17 @@
 export type ProjectLink = {
   label: string;
-  href: string;
+  /** Omit when the destination is not live — render a muted label. */
+  href?: string;
   type: "store" | "web";
 };
 
 export type Project = {
   name: string;
-  icon: string;
+  icon?: string;
   /** App icons are square; brand logos keep aspect ratio. */
   iconStyle?: "app" | "brand";
+  /** Muted name-row chip when the product site is not live. */
+  launching?: boolean;
   description: string;
   tags: string[];
   links: ProjectLink[];
@@ -42,11 +45,19 @@ export const projects: Project[] = [
     name: "SynapLift",
     icon: "/branding/synaplift-app-icon.png",
     description:
-      "AI strength training app for serious lifters. Workout logging, PR analytics, and an AI Coach grounded in real training history. Built App Store ready with subscriptions, Sign in with Apple, and privacy-first AI consent flows.",
-    tags: ["Mobile", "iOS", "AI", "SwiftUI"],
+      "AI strength training app for serious lifters. Workout logging, PR analytics, and an AI Coach grounded in real training history. Built with Flutter for iOS and Android — subscriptions, Sign in with Apple, and privacy-first AI consent flows.",
+    tags: ["Mobile", "Flutter", "iOS", "Android", "AI"],
     links: [
       { label: "Website", href: "https://synaplift.com", type: "web" },
     ],
+  },
+  {
+    name: "Euno",
+    launching: true,
+    description:
+      "Privacy-first wellness journal and gentle AI coach. Native iOS, built with SwiftUI. Site launching.",
+    tags: ["iOS", "SwiftUI", "AI"],
+    links: [{ label: "Site launching", type: "web" }],
   },
   {
     name: "BootSurf Studio",

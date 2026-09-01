@@ -41,20 +41,24 @@ export default function ContactPage() {
             <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-surf-teal" />
             <div>
               <p className="font-semibold text-white">Location</p>
-              <p className="mt-1 text-sm text-surf-mist">{company.country}</p>
+              <p className="mt-1 text-sm text-surf-mist">
+                {company.country} · KVK {company.kvk}
+              </p>
             </div>
           </div>
 
           <p className="pt-4 text-sm text-surf-mist">
-            Product website:{" "}
+            Products:{" "}
             <a
               href={synapliftUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-surf-teal hover:underline"
             >
-              synaplift.com
+              SynapLift
             </a>
+            {" · "}
+            Euno (site launching)
           </p>
         </div>
       </section>
