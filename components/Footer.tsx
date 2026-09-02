@@ -109,7 +109,6 @@ export default function Footer() {
                   SynapLift
                 </a>
               </li>
-              <li>Euno · Site launching</li>
             </ul>
           </div>
         </div>

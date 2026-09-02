@@ -1,17 +1,14 @@
 export type ProjectLink = {
   label: string;
-  /** Omit when the destination is not live — render a muted label. */
-  href?: string;
+  href: string;
   type: "store" | "web";
 };
 
 export type Project = {
   name: string;
-  icon?: string;
+  icon: string;
   /** App icons are square; brand logos keep aspect ratio. */
   iconStyle?: "app" | "brand";
-  /** Muted name-row chip when the product site is not live. */
-  launching?: boolean;
   description: string;
   tags: string[];
   links: ProjectLink[];
@@ -50,14 +47,6 @@ export const projects: Project[] = [
     links: [
       { label: "Website", href: "https://synaplift.com", type: "web" },
     ],
-  },
-  {
-    name: "Euno",
-    launching: true,
-    description:
-      "Privacy-first wellness journal and gentle AI coach. Native iOS, built with SwiftUI. Site launching.",
-    tags: ["iOS", "SwiftUI", "AI"],
-    links: [{ label: "Site launching", type: "web" }],
   },
   {
     name: "BootSurf Studio",
