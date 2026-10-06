@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       - name: npm audit (high and critical)
-        run: npm audit --audit-level=high
+        run: node scripts/check-audit.mjs
 
   secret-scan:
     runs-on: ubuntu-latest

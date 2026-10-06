@@ -31,7 +31,7 @@ jobs:
         run: npm ci
 
       - name: npm audit (high and critical)
-        run: npm audit --audit-level=high
+        run: node scripts/check-audit.mjs
 
       - name: Secret pattern scan
         run: bash scripts/check-secrets.sh
