@@ -32,6 +32,11 @@ jobs:
       - name: npm audit (high and critical)
         run: node scripts/check-audit.mjs
 
+      - name: Check CSP, referrer, and secrets in the static export
+        run: |
+          npm run build
+          bash scripts/check-site-security.sh
+
   secret-scan:
     runs-on: ubuntu-latest
     steps:
