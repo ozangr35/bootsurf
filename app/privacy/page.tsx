@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <Navbar />
       <article className="prose prose-invert mx-auto max-w-3xl px-4 pb-20 pt-28 prose-headings:font-bold prose-a:text-surf-teal sm:px-6 sm:pt-32">
         <h1>Privacy Policy</h1>
-        <p className="text-surf-mist not-prose text-sm">Last updated: June 2026</p>
+        <p className="text-surf-mist not-prose text-sm">Last updated: October 2026</p>
 
         <h2>Who we are</h2>
         <p>
@@ -26,8 +26,10 @@ export default function PrivacyPage() {
 
         <h2>What this site collects</h2>
         <p>
-          This marketing site is static. We do not run analytics trackers, ad
-          networks, or account systems on bootsurf.com. If you email us, we
+          This marketing site is static. We do not run ad trackers, ad
+          networks, or account systems on bootsurf.com. We count visits with
+          Cloudflare Web Analytics: cookieless, aggregate statistics only, no
+          personal profiles. If you email us, we
           process your message and email address only to respond.
         </p>
 
