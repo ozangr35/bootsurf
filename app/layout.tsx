@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { cfBeaconToken } from "@/lib/analytics";
 import { company, contactEmail, siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -83,7 +84,7 @@ export default function RootLayout({
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self' mailto:"
         />
       </head>
       <body className={`${geistSans.variable} overflow-x-hidden font-sans`}>
@@ -94,6 +95,13 @@ export default function RootLayout({
           }}
         />
         {children}
+        {cfBeaconToken ? (
+          <script
+            type="module"
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
+          />
+        ) : null}
       </body>
     </html>
   );
