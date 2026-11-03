@@ -39,6 +39,9 @@ jobs:
       - name: Build static site
         run: npm run build
 
+      - name: Check CSP, referrer, and secrets in the static export
+        run: bash scripts/check-site-security.sh
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
